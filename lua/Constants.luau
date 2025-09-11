@@ -1,0 +1,65 @@
+return table.freeze({
+	-- all the current opcodes
+	-- plus some extras
+	["loadk"] = 1,
+	["loadbool"] = 2,
+	["loadnil"] = 3,
+
+	["getupval"] = 4,
+	["getglobal"] = 5,
+	["gettable"] = 6,
+
+	["setglobal"] = 7,
+	["setupval"] = 8,
+	["settable"] = 9,
+
+	["newtable"] = 10,
+	
+	["self"] = 11,
+	["add"] = 12,
+	["sub"] = 13,
+	["mul"] = 14,
+	["div"] = 15,
+	["mod"] = 16,
+	["pow"] = 17,
+	["unm"] = 18,
+	["ne"] = 19,
+	["len"] = 20,
+	["concat"] = 21,
+	["jmp"] = 22,
+	["eq"] = 23,
+	["lt"] = 24,
+	["le"] = 25,
+	["test"] = 26,
+	["testset"] = 27,
+	["call"] = 28,
+	-- ["tailcall"] = 29,
+	["ret"] = 30,
+	["forloop"] = 31,
+	["forprep"] = 32,
+	["tforloop"] = 33,
+	["setlist"] = 34,
+	-- ["close"] = 35,
+	["closure"] = 36,
+	["vargs"] = 37,
+
+	["neq"] = 38,
+	["gt"] = 39,
+	["ge"] = 40,
+
+	["gettablek"] = 41,
+	["settablek"] = 42,
+
+	["addk"] = 43,
+	["subk"] = 44,
+	["mulk"] = 45,
+	["divk"] = 46,
+	["modk"] = 47,
+	["powk"] = 48,
+	["neqk"] = 49,
+	["eqk"] = 50,
+	["move"] = 51,
+
+	["and"] = 52,
+	["or"] = 53,
+})
