@@ -5,6 +5,7 @@
 This VM uses the [Lune runtime](https://github.com/lune-org/lune) for running its tests, although any environment that uses [Luau](https://luau.org/) will work.
 ```bash
 git clone "https://github.com/magicoal-nerb/lua-luau.git"
+cd lua-luau
 lune run tests/testRunner.luau 
 ```
 
