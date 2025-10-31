@@ -47,7 +47,7 @@ function Buffer.allocate(self: Buffer, bytes: number)
 
 	-- recreate the previous buffer but
 	-- with double the size
-	local newSize = self.size * 2
+	local newSize = math.max(self.size, self.cursor + bytes) * 2
 	local newData = buffer.create(newSize)
 	buffer.copy(newData, 0, self.data)
 
@@ -80,6 +80,7 @@ function Buffer.writestring(self: Buffer, str: string)
 	-- string
 	local len = #str
 	self:allocate(len + 1)
+	
 	buffer.writestring(self.data, self.cursor, str, len)
 	buffer.writeu8(self.data, self.cursor + 1 + len, 0)
 	self.cursor += len + 2
